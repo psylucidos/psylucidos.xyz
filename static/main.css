@@ -1,0 +1,43 @@
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  background-color: #36454F;
+}
+
+header h3 {
+  margin: 0;
+  margin-left: 1vw;
+  padding: 5px;
+  color: #CDCDCD;
+}
+
+#banner {
+  background-image: url('./images/banner.jpg');
+  background-size: cover;
+  height: calc(100% - 56.8px);
+  position: relative;
+}
+
+#banner h2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+@media (max-width: 550px) {
+  #banner {
+    height: calc(100% - 49px);
+  }
+
+  #banner h2 {
+    width: 230px;
+  }
+}
