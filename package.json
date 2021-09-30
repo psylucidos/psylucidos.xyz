@@ -1,0 +1,23 @@
+{
+  "name": "psylucidos.xyz",
+  "version": "0.0.1",
+  "description": "My personal website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psylucidos/psylucidos.xyz.git"
+  },
+  "author": "psylucidos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/psylucidos/psylucidos.xyz/issues"
+  },
+  "homepage": "https://github.com/psylucidos/psylucidos.xyz#readme",
+  "dependencies": {
+    "koa": "^2.13.3",
+    "koa-static": "^5.0.0"
+  }
+}
