@@ -18,6 +18,7 @@
   "homepage": "https://github.com/psylucidos/psylucidos.xyz#readme",
   "dependencies": {
     "koa": "^2.13.3",
-    "koa-static": "^5.0.0"
+    "koa-static": "^5.0.0",
+    "server-hook": "^1.0.0"
   }
 }
