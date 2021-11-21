@@ -6,9 +6,9 @@ const Koa = require('koa');
 const app = new Koa();
 
 hook.init({ // initialise hook
-  target: 'http://status.psylucidos.xyz/api',
-  projectName: 'psylucidos.xyz',
-  interval: 60,
+  target: process.env.HOOKTARGET,
+  projectName: process.env.HOOKNAME,
+  interval: process.env.HOOKINTERVAL,
 })
 
 app.on('error', err => {
