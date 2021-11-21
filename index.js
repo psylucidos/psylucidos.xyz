@@ -17,13 +17,16 @@ app.on('error', err => {
 
 app
   .use(async (ctx, next) => {
-    // create simple response time recorder
-    const start = Date.now();
-    await next();
-    const ms = Date.now() - start;
-    hook.request(ms); // update hook
+    // if request is for a page (not css/js file)
+    if (ctx.path.includes('.html')) {
+      // record response time
+      const start = Date.now();
+      await next();
+      const ms = Date.now() - start;
+      hook.request(ms); // update hook
+    }
   })
-  .use(serve(__dirname + '/static/'));
+  .use(serve(__dirname + '/static/')); //serve static files
 
 app.listen(3000);
 hook.setStatus('Online');
