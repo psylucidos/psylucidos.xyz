@@ -18,12 +18,14 @@ app.on('error', err => {
 app
   .use(async (ctx, next) => {
     // if request is for a page (not css/js file)
-    if (ctx.path.includes('.html')) {
+    if (ctx.path.includes('.html') || ctx.path[ctx.path.length - 1] === '/') {
       // record response time
       const start = Date.now();
       await next();
       const ms = Date.now() - start;
       hook.request(ms); // update hook
+    } else {
+      await next();
     }
   })
   .use(serve(__dirname + '/static/')); //serve static files
