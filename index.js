@@ -12,7 +12,7 @@ hook.init({ // initialise hook
 })
 
 app.on('error', err => {
-  hook.errLog(err);
+  hook.logErr(err);
 });
 
 app
